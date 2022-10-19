@@ -1,20 +1,31 @@
 import React from "react";
-import { View } from "react-native";
-import Avatar from "../../atoms/Avatar";
-import Title from "../../atoms/Title";
-import Email from "../../atoms/Email";
+import { View, TouchableOpacity } from "react-native";
+import { Avatar, Title, MyText, Email } from "../../atoms";
 
-const Card = ({ name }) => {
+const Card = ({ name, email, avatar }) => {
   return (
-    <View
-      style={{ flexDirection: "row", alignItems: "center", marginVertical: 10 }}
+    <TouchableOpacity
+      style={{
+        width: "100%",
+        height: 80,
+        flexDirection: "row",
+        alignItems: "center",
+        marginVertical: 5,
+        paddingHorizontal: 8,
+        backgroundColor: "rgba(128,128,128, 0.2)",
+        borderRadius: 4,
+      }}
     >
-      <Avatar />
-      <View>
-        <Title name={name} />
-        <Email />
+      <Avatar uri={avatar} />
+      <View
+        style={{
+          marginHorizontal: 10,
+        }}
+      >
+        <MyText size={18} color="black" bold="bold" title={name} />
+        <MyText size={12} color="gray" title={email} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

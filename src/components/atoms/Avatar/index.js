@@ -1,13 +1,12 @@
 import React from "react";
 import { Image } from "react-native";
 
-const Avatar = () => {
+export const Avatar = ({ uri }) => {
   return (
     <Image
-      style={{ width: 60, height: 60 }}
-      source={{ uri: "https://via.placeholder.com/150/771796" }}
+      style={{ width: 60, height: 60, borderRadius: 50 }}
+      source={{ uri }}
     />
   );
 };
 
-export default Avatar;

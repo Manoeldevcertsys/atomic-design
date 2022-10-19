@@ -1,8 +1,13 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
-const Email = () => {
-  return <Text>manoel@gmail.com</Text>;
+export const Email = ({ email }) => {
+  return <Text style={styles.Text}>{email}</Text>;
 };
 
-export default Email;
+const styles = StyleSheet.create({
+  Text: {
+    fontSize: 14,
+    color: "gray",
+  },
+});

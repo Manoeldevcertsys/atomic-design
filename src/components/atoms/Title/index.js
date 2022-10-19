@@ -1,8 +1,13 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
-const Title = ({ name }) => {
-  return <Text>{name}</Text>;
+export const Title = ({ name }) => {
+  return <Text style={styles.Text}>{name}</Text>;
 };
 
-export default Title;
+const styles = StyleSheet.create({
+  Text: {
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+});
